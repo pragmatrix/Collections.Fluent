@@ -15,6 +15,13 @@
 			return list.IndexOf(element);
 		}
 
+		public static ElementT SetAt<ElementT, CElementT>(this ElementT element, int index, IList<CElementT> list)
+			where ElementT : CElementT
+		{
+			list[index] = element;
+			return element;
+		}
+
 		public static ElementT RemoveAtFrom<ElementT, CElementT>(this ElementT element, int index, IList<CElementT> list)
 			where ElementT : CElementT
 		{

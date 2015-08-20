@@ -5,8 +5,8 @@ using NUnit.Framework;
 namespace Collections.Fluent.Tests
 {
 	[TestFixture]
-    public class CollectionTests
-    {
+	public class CollectionTests
+	{
 		[Test]
 		public void CollectionAddToAndIsContainedIn()
 		{
@@ -120,6 +120,28 @@ namespace Collections.Fluent.Tests
 		{
 			var l = new Stack<int>();
 			Assert.True(10.PushIn(l).IsIn(l));
+		}
+
+		[Test]
+		public void ArraysCanUseIndexIn()
+		{
+			var array = new[] {9, 10, 11};
+			Assert.That(10.IndexIn(array), Is.EqualTo(1));
+		}
+
+		[Test]
+		public void ArraysCanUseIsIn()
+		{
+			var array = new[] { 9, 10, 11 };
+			Assert.True(10.IsIn(array));
+		}
+
+		[Test]
+		public void ArraysCanUseSet()
+		{
+			var array = new[] { 9, 10, 11 };
+			0.SetAt(1, array);
+			Assert.False(10.IsIn(array));
 		}
 	}
 }
