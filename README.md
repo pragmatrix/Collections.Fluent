@@ -20,9 +20,56 @@ If the `AddTo` method would not be supported, you'd need to break the flow of th
 
 	container.Children.Add(label);
 
-Well, you may think now that there are not so many fluent APIs available on .NET, and you are right. Specifically user interfaces are mostly set up by XAML and in code by assigning properties. And that's why I am trying to create an automatic fluent API generator, called [AutoFluent](https://github.com/pragmatrix/AutoFluent). 
+Well, you may think now that there are not so many fluent APIs available on .NET, and you are right. Specifically user interfaces are mostly set up by XAML and by assigning properties in code. And that's why I am trying to create a [fluent API generator for C#](https://github.com/pragmatrix/AutoFluent). 
 
-## Conventions
+## Extension Methods
+
+*Collection.Fluent* implements the following extension methods:
+
+### Adding elements to a collection
+
+- `element.AddTo(collection)` adds the element to a collection and also returns it.
+- `element.RemoveFrom(collection)` removes the element from a collection and returns the element.
+- `element.IsIn(collection)` tests if the element is contained in the collection and returns a *bool*.
+
+### If the collection is a dictionary, i.e. supports a key / value pair
+
+- `element.AddTo(key, dictionary)` adds the element with the key to the dictionary.
+- `element.Set(key, dictionary)` sets a key / element in the dictionary and returns the element.
+- `key.RemoveKeyFrom(dictionary)` removes the key from the dictionary and returns the key.
+- `key.IsKeyIn(dictionary)` tests if a key is in the dictionary and returns a *bool*.
+
+### Additional overloads for dictionaries
+
+- `element.AddTo(Func<element, key>, dictionary)` adds the element with the key that is returned by the key generator to the collection and returns the element.
+- `element.RemoveFrom(Func<element, key>, dictionary)` removes the element with the key that is returned by the key generator from the dictionary and returns the element.
+- `element.IsIn(Func<element, key>, dictionary)` tests if the key that is returned by the key generator is in the dictionary and returns a *bool*.
+
+### For indexable collections, like a List, or an Array
+
+- `element.InsertIn(index, list)` inserts the element at the index in the list and returns the element.
+- `element.IndexIn(list)` returns the index of the element inside the list, or `-1` if it the element is not in the list.
+- `element.SetAt(index, list)` sets the element at the index in the list and returns the element.
+- `element.RemoveFromAt(index, list)` removes the element at the index from the list and returns the element.
+
+### Queues
+
+- `element.EnqueueIn(queue)` enqueues the element in the queue and returns the element.
+
+### Stacks
+
+- `element.PushIn(stack)` pushes the element on the stack and returns it.
+
+## Conventions & Contribution
+
+The naming of the extension methods tries to adhere to the following rules:
+
+When a *bool* is returned, the method is prefixed by `Is`.
+When an index is returned, the method begins with `Index`.
+When an index is used to modify a collection, the method ends or contains an `At`.
+
+
+
 
 
 

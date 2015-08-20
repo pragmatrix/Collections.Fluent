@@ -22,7 +22,7 @@
 			return element;
 		}
 
-		public static ElementT RemoveAtFrom<ElementT, CElementT>(this ElementT element, int index, IList<CElementT> list)
+		public static ElementT RemoveFromAt<ElementT, CElementT>(this ElementT element, int index, IList<CElementT> list)
 			where ElementT : CElementT
 		{
 			list.RemoveAt(index);
