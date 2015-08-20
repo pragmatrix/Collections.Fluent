@@ -44,7 +44,7 @@ namespace Collections.Fluent.Tests
 		public void DictionarySet()
 		{
 			var dict = new Dictionary<int, string>();
-			"Hello".Set(10, dict);
+			"Hello".SetIn(10, dict);
 			Assert.True(10.IsKeyIn(dict));
 		}
 
@@ -62,7 +62,7 @@ namespace Collections.Fluent.Tests
 		public void SortedListCanUseSetAt()
 		{
 			var l = new SortedList<int, string>();
-			"Hello".Set(10, l);
+			"Hello".SetIn(10, l);
 			Assert.True(10.IsKeyIn(l));
 		}
 
@@ -89,7 +89,7 @@ namespace Collections.Fluent.Tests
 		public void SortedDictionaryCanUseSet()
 		{
 			var l = new SortedDictionary<int, string>();
-			"Hello".Set(10, l);
+			"Hello".SetIn(10, l);
 			Assert.True(10.IsKeyIn(l));
 		}
 
@@ -140,7 +140,7 @@ namespace Collections.Fluent.Tests
 		public void ArraysCanUseSet()
 		{
 			var array = new[] { 9, 10, 11 };
-			0.SetAt(1, array);
+			0.SetInAt(1, array);
 			Assert.False(10.IsIn(array));
 		}
 	}

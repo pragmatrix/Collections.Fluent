@@ -15,7 +15,7 @@
 			return list.IndexOf(element);
 		}
 
-		public static ElementT SetAt<ElementT, CElementT>(this ElementT element, int index, IList<CElementT> list)
+		public static ElementT SetInAt<ElementT, CElementT>(this ElementT element, int index, IList<CElementT> list)
 			where ElementT : CElementT
 		{
 			list[index] = element;

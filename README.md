@@ -35,7 +35,7 @@ Well, you may think now that there are not so many fluent APIs available on .NET
 ### If the collection is a dictionary, i.e. supports a key / value pair
 
 - `element.AddTo(key, dictionary)` adds the element with the key to the dictionary.
-- `element.Set(key, dictionary)` sets a key / element in the dictionary and returns the element.
+- `element.SetIn(key, dictionary)` sets a key / element in the dictionary and returns the element.
 - `key.RemoveKeyFrom(dictionary)` removes the key from the dictionary and returns the key.
 - `key.IsKeyIn(dictionary)` tests if a key is in the dictionary and returns a *bool*.
 
@@ -49,7 +49,7 @@ Well, you may think now that there are not so many fluent APIs available on .NET
 
 - `element.InsertIn(index, list)` inserts the element at the index in the list and returns the element.
 - `element.IndexIn(list)` returns the index of the element inside the list, or `-1` if it the element is not in the list.
-- `element.SetAt(index, list)` sets the element at the index in the list and returns the element.
+- `element.SetInAt(index, list)` sets the element at the index in the list and returns the element.
 - `element.RemoveFromAt(index, list)` removes the element at the index from the list and returns the element.
 
 ### Queues
@@ -60,14 +60,20 @@ Well, you may think now that there are not so many fluent APIs available on .NET
 
 - `element.PushIn(stack)` pushes the element on the stack and returns it.
 
-## Conventions & Contribution
+## Conventions
 
-The naming of the extension methods tries to adhere to the following rules:
+The names of the extension methods adhere to the following rules:
 
-When a *bool* is returned, the method is prefixed by `Is`.
-When an index is returned, the method begins with `Index`.
-When an index is used to modify a collection, the method ends or contains an `At`.
+- When a *bool* is returned, the method is prefixed by `Is`.
+- When an index is returned, the method begins with `Index`.
+- When an index is used to modify a collection, the method ends with an `At`.
+- In general, when an extension method modifies a collection, it contains an `In` to indicate the reversed order of arguments and to avoid collisions with existing methods. However, there are two exceptions: in case an element is removed, the `In` is replaced by `From`, and when an element is added, the `In` gets replaced by `To`.
 
+## License & Copyright
+
+License: BSD
+
+Copyright © 2015 Armin Sander
 
 
 

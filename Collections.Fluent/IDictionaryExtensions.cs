@@ -28,7 +28,7 @@
 			return dictionary.ContainsKey(key);
 		}
 
-		public static ElementT Set<KeyT, CKeyT, ElementT, CElementT>(
+		public static ElementT SetIn<KeyT, CKeyT, ElementT, CElementT>(
 			this ElementT element,
 			KeyT key,
 			IDictionary<CKeyT, CElementT> dictionary)
