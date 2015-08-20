@@ -6,7 +6,7 @@
 
 Instead of ``collection.Add(element)``, you may use ``element.AddTo(collection)``, or instead of ``collection.Remove(element)``, ``element.RemoveFrom(collection)`` can be used, you get the idea.
 
-By itself, that does not seem like an improvement, but when you use a [fluent API](https://en.wikipedia.org/wiki/Fluent_interface) and [method chaining](https://en.wikipedia.org/wiki/Method_chaining) that parameterizes objects, the last step is often to add an element to a collection. For example:
+By itself, that does not seem like an improvement, but when you use a [fluent API](https://en.wikipedia.org/wiki/Fluent_interface) and [method chaining](https://en.wikipedia.org/wiki/Method_chaining) to parameterize objects, the last step is often to add an element to a collection. For example:
 
 	var container = new StackPanel();
 	
@@ -20,7 +20,7 @@ If the `AddTo` method would not be supported, you'd need to break the flow of th
 
 	container.Children.Add(label);
 
-Well, you may think now that there are not so many fluent APIs available on .NET, and you are right. Specifically user interfaces are mostly set up by XAML and by assigning properties in code. And that's why I am trying to create a [fluent API generator for C#](https://github.com/pragmatrix/AutoFluent). 
+Well, you may think now that there are not so many fluent APIs available for .NET, and you are right. Specifically user interfaces are mostly set up by XAML and in code by assigning properties. And that's why I am trying to create a [fluent API generator for C#](https://github.com/pragmatrix/AutoFluent). 
 
 ## Extension Methods
 
@@ -28,7 +28,7 @@ Well, you may think now that there are not so many fluent APIs available on .NET
 
 ### Adding elements to a collection
 
-- `element.AddTo(collection)` adds the element to a collection and also returns it.
+- `element.AddTo(collection)` adds the element to a collection and returns it.
 - `element.RemoveFrom(collection)` removes the element from a collection and returns the element.
 - `element.IsIn(collection)` tests if the element is contained in the collection and returns a *bool*.
 
