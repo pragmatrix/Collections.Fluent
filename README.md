@@ -1,5 +1,7 @@
 # Collections.Fluent - Fluent Collection Extensions for .NET
 
+[![Build status](https://ci.appveyor.com/api/projects/status/3r8h4cwno4dp73j9?svg=true)](https://ci.appveyor.com/project/pragmatrix/collections-fluent)
+
 ## Introduction
 
 *Collections.Fluent* is a small portable class library that tries to move the focus away from collection types back to the elements stored in them. It does that by introducing a number of [extension methods](https://msdn.microsoft.com/en-us//library/bb383977.aspx) that flip the order of the method parameters.
