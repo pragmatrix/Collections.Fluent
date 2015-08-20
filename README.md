@@ -14,7 +14,7 @@ By itself, that does not seem like an improvement, but when you use a [fluent AP
 		.Text("Hello")
 		.YAlign(VerticalAlignment.Top)
 		.XAlign(HorizontalAlignment.Center)
-		.AddTo(container.Children)
+		.AddTo(container.Children);
 
 If the `AddTo` method would not be supported, you'd need to break the flow of the method chain and add an additional statement:
 
