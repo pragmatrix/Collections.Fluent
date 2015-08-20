@@ -6,3 +6,4 @@ obj/
 *.ncrunchproject
 *.ncrunchsolution
 /packages/
+*.nupkg

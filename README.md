@@ -24,6 +24,10 @@ If the `AddTo` method would not be supported, you'd need to break the flow of th
 
 Well, you may think now that there are not so many fluent APIs available for .NET, and you are right. Specifically user interfaces are mostly set up by XAML and in code by assigning properties. And that's why I am trying to create a [fluent API generator for C#](https://github.com/pragmatrix/AutoFluent). 
 
+## Installation
+
+*Collections.Fluent* is a portable class library that is [available via NuGet](https://www.nuget.org/packages/Collections.Fluent/). When installed, the extension methods are available at all places where the `System.Collections.Generic` namespace is used.
+
 ## Extension Methods
 
 *Collection.Fluent* implements the following extension methods:
