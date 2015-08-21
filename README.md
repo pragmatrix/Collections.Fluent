@@ -8,7 +8,7 @@
 
 Instead of ``collection.Add(element)``, you may use ``element.AddTo(collection)``, or instead of ``collection.Remove(element)``, ``element.RemoveFrom(collection)`` can be used, you get the idea.
 
-By itself, that does not seem like an improvement, but when you use a [fluent API](https://en.wikipedia.org/wiki/Fluent_interface) and [method chaining](https://en.wikipedia.org/wiki/Method_chaining) to parameterize objects, the last step is often to add an element to a collection. For example:
+By itself, that does not seem like an improvement, but when you use a [fluent API](https://en.wikipedia.org/wiki/Fluent_interface) and [method chaining](https://en.wikipedia.org/wiki/Method_chaining) to parameterize objects, the last step is often to add an element to a container. For example:
 
 	var container = new StackPanel();
 	
@@ -56,7 +56,6 @@ Well, you may think now that there are not so many fluent APIs available for .NE
 - `element.InsertIn(index, list)` inserts the element at the index in the list and returns the element.
 - `element.IndexIn(list)` returns the index of the element inside the list, or `-1` if it the element is not in the list.
 - `element.SetInAt(index, list)` sets the element at the index in the list and returns the element.
-- `element.RemoveFromAt(index, list)` removes the element at the index from the list and returns the element.
 
 ### Queues
 

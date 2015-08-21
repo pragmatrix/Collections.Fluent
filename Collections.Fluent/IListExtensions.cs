@@ -21,12 +21,5 @@
 			list[index] = element;
 			return element;
 		}
-
-		public static ElementT RemoveFromAt<ElementT, CElementT>(this ElementT element, int index, IList<CElementT> list)
-			where ElementT : CElementT
-		{
-			list.RemoveAt(index);
-			return element;
-		}
 	}
 }
