@@ -37,14 +37,9 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICollectionExtensions.cs" />
-    <Compile Include="IDictionaryExtensions.cs" />
-    <Compile Include="IListExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueueExtensions.cs" />
-    <Compile Include="SortedDictionaryExtensions.cs" />
-    <Compile Include="StackExtensions.cs" />
   </ItemGroup>
+  <Import Project="..\Collections.Fluent.Shared\Collections.Fluent.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
