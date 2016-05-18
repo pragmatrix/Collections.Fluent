@@ -78,14 +78,4 @@ The names of the extension methods adhere to the following rules:
 
 License: BSD
 
-Copyright © 2015 Armin Sander
-
-
-
-
-
-
-
-
-
-
+Copyright © 2016 Armin Sander
