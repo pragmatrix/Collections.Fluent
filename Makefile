@@ -13,7 +13,7 @@ package: build
 	cd ${name} && ${nuget} pack ${name}.csproj -Version ${ver} -Prop Configuration=${conf} 
 .PHONY: distribute-package
 distribute-package:
-	cd ${name} && nuget push ${name}.${ver}.nupkg
+	cd ${name} && nuget push ${name}.${ver}.nupkg -source https://www.nuget.org/api/v2/package/ 
 
 .PHONY: build-release
 build-release: conf=Release
