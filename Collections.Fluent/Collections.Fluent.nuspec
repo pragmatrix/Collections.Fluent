@@ -10,8 +10,8 @@
     <projectUrl>https://github.com/pragmatrix/Collections.Fluent</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Collections.Fluent is a small portable class library that tries to move the focus away from collection types back to the elements stored in them. It does that by introducing a number of extension methods that flip the order of the method parameters.</description>
-    <releaseNotes>Removed RemoveFromAt() extension method, because it does not make sense at all.</releaseNotes>
-    <copyright>Copyright 2015 Armin Sander</copyright>
+    <releaseNotes>Ported to NetStandard.</releaseNotes>
+    <copyright>Copyright 2018 Armin Sander</copyright>
     <tags>collections fluent method-chaining autofluent</tags>
   </metadata>
 </package>
