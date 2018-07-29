@@ -1,9 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net40;net45;net46</TargetFrameworks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>Collections.Fluent</PackageId>
+    <Title>Fluent Collection Extensions for .NET</Title>
+    <Authors>Armin Sander</Authors>
+    <Description>Collections.Fluent is a small portable class library that tries to move the focus away from collection types back to the elements stored in them. It does that by introducing a number of extension methods that flip the order of the method parameters.</Description>
+    <PackageVersion>0.4.0.0</PackageVersion>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>collections fluent method-chaining autofluent</PackageTags>
+    <PackageLicenseUrl>https://github.com/pragmatrix/Collections.Fluent</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/pragmatrix/Collections.Fluent</PackageProjectUrl>
+    <Copyright>Copyright 2018 Armin Sander</Copyright>
+    <PackageReleaseNotes>Multitargeted to netstandard2.0, net40, net45, net46</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
