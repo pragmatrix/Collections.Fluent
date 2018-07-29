@@ -2,6 +2,7 @@ msbuild=msbuild.exe /m /verbosity:m /nologo
 nuget=nuget.exe
 
 name=Collections.Fluent
+version=0.4.0
 
 .PHONY: distribute
 distribute: package distribute-package
@@ -9,11 +10,12 @@ distribute: package distribute-package
 .PHONY: package
 package: conf=Release
 package: 
-	cd ${name} && dotnet pack ${name}.csproj -c ${conf}
+	cd ${name} && dotnet pack ${name}.csproj -c ${conf} /p:PackageVersion=${version}
 
-.PHONY: distribute-package
-distribute-package:
-	cd ${name} && nuget push ${name}.${ver}.nupkg -source https://www.nuget.org/api/v2/package/ 
+.PHONY: publish
+publish: conf=Release
+publish: package
+	cd ${name}/bin/${conf} && ${nuget} push ${name}.${version}.nupkg -source https://www.nuget.org/api/v2/package/ 
 
 .PHONY: build-release
 build-release: conf=Release

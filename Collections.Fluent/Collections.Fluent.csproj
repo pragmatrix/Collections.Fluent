@@ -10,7 +10,6 @@
     <Title>Fluent Collection Extensions for .NET</Title>
     <Authors>Armin Sander</Authors>
     <Description>Collections.Fluent is a small portable class library that tries to move the focus away from collection types back to the elements stored in them. It does that by introducing a number of extension methods that flip the order of the method parameters.</Description>
-    <PackageVersion>0.4.0.0</PackageVersion>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>collections fluent method-chaining autofluent</PackageTags>
     <PackageLicenseUrl>https://github.com/pragmatrix/Collections.Fluent</PackageLicenseUrl>
